@@ -9,13 +9,11 @@ function generateCaptcha() {
     }
     return captcha;
 }
-
 // Display the CAPTCHA in the HTML
 function displayCaptcha() {
     const captchaText = generateCaptcha();
     document.getElementById("captcha").innerText = captchaText;
 }
-
 // Validate the user's input
 function validateLogin() {
     const username = document.getElementById("username").value;
@@ -34,7 +32,6 @@ function validateLogin() {
     // Regenerate a new CAPTCHA
     displayCaptcha();
 }
-
 // Initialize the CAPTCHA when the page loads
 window.onload = function() {
     displayCaptcha();
